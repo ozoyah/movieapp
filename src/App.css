@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(24, 9, 37);
+  width: 90%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin: 3rem;
+  margin-left: 5rem;
+}
+
+.nav h1 {
+  color: #ffffff;
+}
+
+.search {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  background: #e9e2e2;
+  /* -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527; */
+  box-shadow: 5px 5px 7px #1b2842, -5px -5px 7px #1b2842;
 }
 
-.App-link {
-  color: #61dafb;
+.search input {
+  font-size: 1rem;
+  color: #161515;
+  font-weight: 600;
+  background: #e9e2e2;
+  outline: none;
+  border: none;
+  margin: 0.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1.5rem;
+  flex-wrap: wrap;
+}
+.movie {
+  display: flex;
+  justify-content: flex-start;
+  width: 310px;
+  height: 460px;
+  margin: 1.5rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: none;
+}
+
+.moviePoster {
+  width: 100%;
+  height: 100%;
+}
+.moviePoster img {
+  width: 100%;
+  height: 100%;
+}
+
+.movieType {
+  z-index: 2;
+  background-color: #103f5f;
+  padding: 2px 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-wrap: wrap;
+}
+
+.movieType p {
+  font-size: 1rem;
+  width: 100%;
+  color: #f7f6f5;
+}
+
+.movieType h3 {
+  font-size: 1rem;
+  color: #e9e2e2;
+}
+
+/* media queries */
+
+@media screen and (max-width: 788px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search {
+    margin-top: 20px;
   }
 }
